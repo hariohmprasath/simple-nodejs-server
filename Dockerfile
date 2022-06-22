@@ -6,7 +6,7 @@ ARG JAR_PATH
 
 VOLUME /tmp
 WORKDIR /
-ADD . .
+COPY . .
 
 RUN mvn clean install -DskipTests
 RUN mv target/buildpack-demo-0.0.1-SNAPSHOT.jar /app.jar
